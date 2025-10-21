@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stellenbosch Astronomy Society</title>
+  <link rel="stylesheet" href="css/styles.css" /> <!-- main stylesheet -->
+</head>
+<body>
+  <!-- Top banner with overlayed club name -->
+  <header class="banner" id="banner">
+    <img src="images/logo.svg" alt="Star field banner" class="banner-img" /> <!-- background image -->
+    <div class="banner-overlay">
+      <h1 class="club-title">Stellenbosch Astronomy Society</h1> <!-- overlayed club name -->
+      <p class="club-subtitle">Join us in exploring the Cosmos</p> <!-- optional subtitle -->
+    </div>
+  </header>
+
+  <!-- Tab navigation that sits under the banner -->
+  <nav class="tab-nav" id="tabNav">
+    <ul>
+      <li><a href="#about" data-target="about" class="tab-link">About</a></li>
+      <li><a href="#team" data-target="team" class="tab-link">Meet the team</a></li>
+      <li><a href="#gallery" data-target="gallery" class="tab-link">Gallery</a></li>
+      <li><a href="#events" data-target="events" class="tab-link">Events</a></li>
+      <li><a href="#newsletter" data-target="newsletter" class="tab-link">Newsletter</a></li>
+      <li><a href="#sponsors" data-target="sponsors" class="tab-link">Sponsors</a></li>
+    </ul>
+  </nav>
+
+  <!-- Content sections -->
+  <main>
+    <section id="about" class="panel">
+      <div class="container">
+        <h2>About</h2>
+        <p>The society is called “Stellenbosch University Astronomy Society”,  and is affiliated with the Societies Council of Stellenbosch University. 
+          We aim to foster academic interest and community engagement in the field of astronomy, and operate in line with 
+          Stellenbosch University’s values and policies.</p>
+      </div>
+    </section>
+    <section id="vision" class="panel">
+      <div class="container">
+        <h2>Vision</h2>
+        <p>To inspire students with the wonders of the night sky 
+          and foster the curiosity and appreciation of the universe that is within all of us.</p>
+      </div>
+    </section>
+
+    <section id="team" class="panel">
+      <div class="container">
+        <h2>Meet the team</h2>
+        
+        <!-- Team header photo (full-width, not cropped)
+             The img uses height:auto so the image is never cropped. -->
+        <figure class="team-header-photo">
+          <img src="images/teamphoto.jpg" alt="The Astronomy Club team for a group photo" />
+          <figcaption class="team-photo-caption">
+            Society team photo — AGM, September 2025.
+            <!-- Change with full description -->
+            <br />
+            From left: Steven, Koustav, Keegan, Hemanth, Michael, Mikaela, Phillip, Tebogo, Fatima, Dylan, Thobekile, Yin-Zhe Ma.
+          </figcaption> <!-- optional caption; remove if not needed -->
+        </figure>
+        <p class="team-intro">Current members</p>
+        <div class="team-grid">
+          <!-- Team card 1 -->
+          <article class="team-card">
+            <!-- <img src="images/team1.jpg" alt="Hemanth" class="team-photo" /> --> <!-- team member photo -->
+            <h3>Hemanth</h3>
+            <p class="role">Chairperson</p>
+            <!--<p class="bio">Oversees general proceedings.</p>  -->
+          </article>
+          <!-- Duplicate team cards and change image/name to add more members -->
+          <article class="team-card">
+            <!-- <img src="images/team2.jpg" alt="Hemanth" class="team-photo" /> --> <!-- team member photo -->
+            <h3>Phillip</h3>
+            <p class="role">Vice-Chairperson</p>
+            <!--<p class="bio">Assisting Chairperson.</p>  -->
+          </article>
+           <!-- -->
+          <article class="team-card">
+            <!-- <img src="images/team3.jpg" alt="Phil" class="team-photo" /> --> <!-- team member photo -->
+            <h3>Tebogo</h3>
+            <p class="role">Secretary</p>
+            <!--<p class="bio">Assisting Chairperson.</p>  -->
+          </article>
+          <!-- -->
+          <article class="team-card">
+            <!-- <img src="images/team4.jpg" alt="person" class="team-photo" /> --> <!-- team member photo -->
+            <h3>Fatima</h3>
+            <p class="role">Treasurer</p>
+            <!--<p class="bio">Assisting Chairperson.</p>  -->
+          </article>
+          <!-- -->
+          <article class="team-card">
+            <!-- <img src="images/team4.jpg" alt="person" class="team-photo" /> --> <!-- team member photo -->
+            <h3>Koustav</h3>
+            <p class="role">Events Manager</p>
+            <!--<p class="bio">Assisting Chairperson.</p>  -->
+          </article>
+          <!-- -->
+          <article class="team-card">
+            <!-- <img src="images/team4.jpg" alt="person" class="team-photo" /> --> <!-- team member photo -->
+            <h3>Mikaela</h3>
+            <p class="role">Social Media Manager</p>
+            <!--<p class="bio">Assisting Chairperson.</p>  -->
+          </article>
+          <!-- -->
+          <article class="team-card">
+            <!-- <img src="images/team4.jpg" alt="person" class="team-photo" /> --> <!-- team member photo -->
+            <h3>Keegan</h3>
+            <p class="role">Equipment Manager</p>
+            <!--<p class="bio">Assisting Chairperson.</p>  -->
+          </article>
+          <!-- -->
+          
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="panel">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+          <!-- Put gallery images here -->
+          <figure class="gallery-item">
+            <img src="images/gal1.jpg" alt="Telescope 1" />
+            <figcaption>Telescope handling workshop</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="images/gal2.jpg" alt="Solar observation" />
+            <figcaption>Solar observation</figcaption>
+          </figure>
+          <!-- add more gallery items -->
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="panel">
+      <div class="container">
+        <h2>Events</h2>
+        <p>Under construction: all upcoming events will be posted here with signup links.</p>
+      </div>
+    </section>
+
+    <section id="newsletter" class="panel">
+      <div class="container">
+        <h2>Newsletter</h2>
+        <p>Under construction: we aim to publish astronomy related newsletters on a bi-weekly basis.</p>
+      </div>
+    </section>
+
+    <section id="sponsors" class="panel">
+      <div class="container">
+        <h2>Sponsors</h2>
+        <p>Under construction.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script> <!-- behavior script -->
+</body>
+</html>

@@ -9,4 +9,4 @@ We aim to
 - create a space that is welcoming to all people, regardless of background, which will be both stimulating and fun.
 - promote astronomical literacy, and connect members in the society with professional astronomers and astrophysicists in a friendly and informative atmosphere with ample opportunities for hands-on observing of celestial objects and enjoyable astronomy-themed meetups.
 
-The website is currently under construction [here](https://koustav-konar.github.io/SU-Astro-Society.github.io/).
+The website is currently under construction [here](https://sunastronomysociety.github.io/SU-Astro-Society.github.io/).

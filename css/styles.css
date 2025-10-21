@@ -1,0 +1,84 @@
+/* Basic reset and variables */
+:root{
+  --nav-height:64px; /* height of the tab bar */
+  --accent:#0b3d91; /* club color */
+  --bg:#0f1724; /* page background */
+  --card:#0b1220; /* card background */
+  --text:#e6eef8; /* main text color */
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Arial,sans-serif;}
+
+/* Banner area */
+.banner{position:relative;height:320px;overflow:hidden;}
+.banner-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.55);} /* background cover */
+.banner-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1rem;}
+.club-title{font-size:2.25rem;color:white;margin-bottom:0.25rem;} /* main title */
+.club-subtitle{opacity:0.9;color:rgba(255,255,255,0.9);}
+
+/* Tab navigation */
+.tab-nav{background:linear-gradient(90deg,rgba(0,0,0,0.25),rgba(0,0,0,0.1));height:var(--nav-height);display:flex;align-items:center;position:relative;z-index:40;}
+.tab-nav ul{display:flex;gap:0.5rem;padding-left:1rem;list-style:none;overflow:auto;}
+.tab-nav a{display:inline-block;padding:0.6rem 1rem;color:var(--text);text-decoration:none;border-radius:6px;white-space:nowrap;}
+.tab-nav a:hover{background:rgba(255,255,255,0.04);}
+.tab-nav a.active{background:var(--accent);color:white;box-shadow:0 6px 18px rgba(11,61,145,0.18);}
+
+/* Sticky class applied by JavaScript when tabs should stick */
+.tab-nav.sticky{position:fixed;top:0;left:0;right:0;box-shadow:0 6px 22px rgba(0,0,0,0.5);}
+
+/* Page panels (sections) */
+.container{max-width:1000px;margin:0 auto;padding:2rem;}
+.panel{padding:2.5rem 1rem;background:transparent;border-bottom:1px solid rgba(255,255,255,0.03);}
+
+/* Team header photo: full-width, never cropped */
+.team-header-photo{ /* wrapper to center and add spacing */
+  margin:1.25rem 0; /* spacing above/below the group photo */
+  text-align:center;
+  overflow:visible; /* allow whole image to show */
+}
+
+/* the image itself — width 100% and height auto keeps the whole image visible */
+.team-header-photo img{
+  width:100%;      /* fill container width */
+  height:auto;     /* preserve aspect ratio; prevents cropping */
+  max-height:none; /* ensure no forced cropping by a max-height rule */
+  display:block;
+  border-radius:8px; /* optional rounded corners; remove if you want sharp edges */
+  object-fit:contain; /* defensive: keep whole image inside box if object sizing used */
+}
+
+/* optional caption styling */
+.team-photo-caption{
+  margin-top:0.5rem;
+  color:rgba(255,255,255,0.65);
+  font-size:0.95rem;
+}
+
+/* ensure container padding matches the rest of the site */
+.team-intro{margin-top:0.5rem;color:rgba(255,255,255,0.9);}
+
+/* If you previously had rules that limit img height globally, ensure team header bypasses them */
+/* Example override (only include if you have a global img max-height): */
+.team-header-photo img{ max-height:none !important; }
+
+/* Team grid */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem;}
+.team-card{background:var(--card);padding:1rem;border-radius:8px;text-align:center;}
+.team-photo{width:100%;height:200px;object-fit:cover;border-radius:6px;margin-bottom:0.5rem;}
+.role{color:rgba(255,255,255,0.7);font-weight:600}
+
+/* Gallery grid */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.75rem;margin-top:1rem;}
+.gallery-item img{width:100%;height:160px;object-fit:cover;border-radius:6px;display:block;}
+
+/* Utility for smooth scrolling offset (so section title visible under sticky nav) */
+:target::before{
+  content:"";display:block;height:calc(var(--nav-height) + 12px);margin-top:calc(-1 * (var(--nav-height) + 12px));
+}
+
+/* Responsive adjustments */
+@media (max-width:600px){
+  .banner{height:220px;}
+  .club-title{font-size:1.5rem;}
+}
